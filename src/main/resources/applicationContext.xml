@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- basic beans namespace -->
+
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--                           http://www.springframework.org/schema/beans/spring-beans.xsd">-->
+
+<!--    &lt;!&ndash; Importing bean definitions from services.xml &ndash;&gt;-->
+<!--    <import resource="services.xml"/>-->
+
+<!--    &lt;!&ndash; Importing bean definitions from daos.xml &ndash;&gt;-->
+<!--    <import resource="daos.xml"/>-->
+
+<!--    &lt;!&ndash; You can define additional beans here if needed &ndash;&gt;-->
+<!--</beans>-->
+
+<!-- context namespace -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Enable component scanning to automatically discover beans -->
+    <context:component-scan base-package="com.example.demo"/>
+</beans>
