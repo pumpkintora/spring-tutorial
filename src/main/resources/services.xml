@@ -7,7 +7,17 @@
 
     <!-- Define a service bean that depends on the DAO bean -->
     <bean id="userService" class="com.example.demo.service.UserService">
-        <property name="userDao" ref="userDao"/>
+<!--        <property name="userDao" ref="userDao"/>-->
+        <constructor-arg ref="userDao"/>
     </bean>
 
+    <!-- Bean with multiple aliases -->
+    <bean id="companyService" name="companyService, orgService" class="com.example.demo.service.CompanyService">
+        <property name="company" value="Google" />
+    </bean>
+
+    <!-- Bean without an id or name (Spring will generate a unique name) -->
+    <bean class="com.example.demo.service.UnnamedService">
+        <property name="message" value="Hello from unnamed service!" />
+    </bean>
 </beans>

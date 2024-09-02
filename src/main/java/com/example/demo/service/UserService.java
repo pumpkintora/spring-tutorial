@@ -17,6 +17,11 @@ public class UserService {
 //    public void setUserDao(UserDao userDao) {
 //        this.userDao = userDao;
 //    }
+    // Add a no-argument constructor if needed
+//    public UserService() {
+//        // Default constructor
+//    }
+
 
     public void performOperation() {
         System.out.println("Service layer performing operation...");
